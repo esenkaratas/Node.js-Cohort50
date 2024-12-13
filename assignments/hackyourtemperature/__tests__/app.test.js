@@ -1,11 +1,7 @@
-import app from "../server.js";
+import app from "../app.js";
 import request from "supertest";
 
 describe("POST /weather", () => {
-  it("Quick test", () => {
-    expect(1).toBe(1);
-  });
-
   it("Should return city name and temperature when city is found", async () => {
     const response = await request(app)
       .post("/weather")
